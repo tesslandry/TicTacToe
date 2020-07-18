@@ -5,6 +5,8 @@ class Board:
         self.p0 = p0Symbol
         self.p1 = p1Symbol
 
+    #For now we will code the game with a command line representation
+    #We will then display it on pygame
     def __str__(self):
         boardToPrint = ""
         for i in range(len(self.board)):
