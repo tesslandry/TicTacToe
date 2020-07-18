@@ -2,7 +2,7 @@
 
 import pygame
 import sys
-import board
+
 pygame.init()
 
 #COLORS

@@ -29,7 +29,5 @@ class Board:
 
 
 
-myBoard = Board("X", "O")
-print(myBoard)
 
     
