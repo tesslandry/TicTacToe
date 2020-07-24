@@ -1,4 +1,11 @@
 #Board
+
+"""
+A class that creates a Board Object
+Input:
+    p0Symbol: symbol to display for player ID 0 (generally X or O)
+    p1Symbol: symbol to display for player ID 1 (generally X or O)
+"""
 class Board:
     def __init__(self, p0Symbol: str, p1Symbol: str):
         self.board = [[-1, -1, -1], [-1, -1, -1], [-1, -1, -1]]
@@ -25,9 +32,20 @@ class Board:
                 else:
                     boardToPrint += " | "  
         return boardToPrint
+
+    #Checks if moveMade causes 3 on a row on itself
+    def threeInARow(self):
+        if ((self.board[0][0] == self.board[0][1] and self.board[0][0] == self.board[0][2] and self.board[0][0] > -1) or
+            (self.board[1][0] == self.board[1][1] and self.board[1][0] == self.board[1][2] and self.board[1][0] > -1) or
+            (self.board[2][0] == self.board[2][1] and self.board[2][0] == self.board[2][2] and self.board[2][0] > -1) or
+            (self.board[0][0] == self.board[1][0] and self.board[0][0] == self.board[2][0] and self.board[0][0] > -1) or
+            (self.board[0][1] == self.board[1][1] and self.board[0][1] == self.board[2][1] and self.board[0][1] > -1) or
+            (self.board[0][2] == self.board[1][2] and self.board[0][2] == self.board[2][2] and self.board[0][2] > -1) or
+            (self.board[0][0] == self.board[1][1] and self.board[0][0] == self.board[2][2] and self.board[0][0] > -1) or
+            (self.board[0][2] == self.board[1][1] and self.board[0][2] == self.board[2][0] and self.board[0][2] > -1)):
+            return True
+        return False
                 
-
-
 
 
     
